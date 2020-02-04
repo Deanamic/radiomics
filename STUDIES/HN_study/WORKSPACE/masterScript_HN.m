@@ -89,7 +89,7 @@ testCost = 0.5:0.1:2; % Emphasis factor on positive instances during random fore
 testSplit = 1/3; % Proportion of test cases in stratified random sub-sampling splits
 
 % PARALLEL AND RANDOMIZATION OPTIONS
-seed =  54288; rng(seed); % For reproducibility of results. A seed chosen with heart, to remind us that it was very close and that we must continue to believe in our dream --> #1995referendum. Replace this line by "rng('shuffle')" to make it completely random. 
+seed =  54288; rand("state",seed); % For reproducibility of results. A seed chosen with heart, to remind us that it was very close and that we must continue to believe in our dream --> #1995referendum. Replace this line by "rng('shuffle')" to make it completely random. 
 seeds = ceil(1000000000*rand(4,1)); % A bootstrapping seed for feature set reduction, feature selection, prediction performance estimation and computation of final regression coefficients
 nBatch = 9; % Number of parallel batch to use (3 outcomes * 3 different feature sets)
 nBatch_Read = 4; % beware: RAM usage limitations

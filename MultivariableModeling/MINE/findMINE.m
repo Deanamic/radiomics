@@ -41,7 +41,7 @@ function [pathMINE] = findMINE(OS)
 
 % Find MINE.jar in the system
 if strcmp(OS,'Linux')
-   [~,~] = system('find / -name "MINE.jar">temp.txt');
+   [~,~] = system('find ~/UHN/radiomics -name "MINE.jar"> temp.txt');
 end
 
 % Reads in a temporary file where MINE.jar is located
